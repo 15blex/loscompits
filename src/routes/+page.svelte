@@ -5,4 +5,4 @@
   <title>Los Compits</title>
 </svelte:head>
 
-<h1>Home</h1>
+<h1>Cumbia, Salsa y Son Cubano</h1>

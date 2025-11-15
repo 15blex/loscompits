@@ -1,7 +1,7 @@
-import { writable } from 'svelte/store';
 import { persisted } from 'svelte-persisted-store';
 
-type languageType = 'en' | 'es' | 'fr' | 'ca' | 'it' | 'de' | 'pt';
+type languages= 'en' | 'es' | 'fr' | 'ca' | 'it' | 'de' | 'pt';
+type siteMode = 'light' | 'dark';
 
-export const darkThemeEnabled = writable(false);
-export const languageStore = persisted<languageType>('language', 'es');
+export const mode = persisted<siteMode>('mode', 'light');
+export const language = persisted<languages>('language', 'es');

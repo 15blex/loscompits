@@ -19,7 +19,7 @@ msgstr ""
 #~ msgstr "Visita <0>svelte.dev/docs/kit</0> per leggere la documentazione"
 
 #: src/lib/components/Header.svelte
-#: src/routes/+page.svelte
+#: src/lib/components/Header.svelte
 msgid "Home"
 msgstr "Home"
 
@@ -35,9 +35,8 @@ msgstr "Bio"
 msgid "Media"
 msgstr "Media"
 
-#: src/lib/components/Footer.svelte
-msgid "© 2025 Los Compits"
-msgstr "© 2025 Los Compits"
+#~ msgid "© 2025 Los Compits"
+#~ msgstr "© 2025 Los Compits"
 
 #: src/routes/+page.svelte
 msgid "Los Compits"
@@ -71,6 +70,7 @@ msgstr "Los Compits - La banda"
 msgid "Los Compits - Events"
 msgstr "Los Compits - Eventi"
 
+#: src/lib/components/Header.svelte
 #: src/routes/events/+page.svelte
 msgid "Events"
 msgstr "Eventi"
@@ -101,4 +101,21 @@ msgstr ""
 
 #: src/lib/components/Header.svelte
 msgid "Português"
+msgstr ""
+
+#: src/lib/components/Footer.svelte
+msgid "© 2025 Los Compits · Todos los derechos reservados"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Los Compits logo"
+msgstr ""
+
+#. placeholder {0}: $mode
+#: src/lib/components/Header.svelte
+msgid "Mode {0}"
+msgstr ""
+
+#: src/routes/+page.svelte
+msgid "Cumbia, Salsa y Son Cubano"
 msgstr ""

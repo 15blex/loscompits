@@ -10,3 +10,137 @@ main {
   background-position: center;
   background-size: cover;
 }
+
+/* Typography scale */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h1);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h2);
+  line-height: 1.12;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  line-height: 1.15;
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h4);
+  line-height: 1.2;
+}
+
+p,
+li {
+  font-size: var(--font-size-body);
+}
+
+small {
+  font-size: var(--font-size-small);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.1;
+  border: 2px solid transparent;
+  transition: background-color var(--transition-ui), color var(--transition-ui), transform var(--transition-ui);
+}
+
+.btn--primary {
+  background: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.btn--primary:hover {
+  background: color-mix(in oklab, var(--accent-primary), #000 12%);
+}
+
+.btn--primary:active {
+  transform: translateY(1px);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+}
+
+.btn--secondary:hover {
+  background: color-mix(in oklab, var(--accent-secondary), var(--bg-primary) 85%);
+}
+
+.btn--secondary:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent-secondary);
+  outline-offset: 2px;
+}
+
+/* Utility */
+.flow>*+* {
+  margin-top: var(--space-4);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.nav__link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 0.25rem 0.4rem;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent-secondary);
+  transition: width var(--transition-ui);
+}
+
+.nav__link:hover::after,
+.nav__link[aria-current="page"]::after {
+  width: 100%;
+}
+
+.nav__link:hover {
+  color: var(--accent-secondary);
+}
+
+.language-select {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-strong);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-btn);
+}
+
+.language-select:focus-visible {
+  outline: 3px solid var(--accent-secondary);
+}

@@ -326,5 +326,52 @@
     --transition-timing-ease-in-out: ease-in-out;
     --transition-timing-linear: linear;
 
+    /* Basic Color Tokens (Los Compits Theme) */
+    --color-primary: #D8232A;
+    /* Salsa Red */
+    --color-secondary: #FFC345;
+    /* Mango Yellow */
+    --color-accent: #19A7A2;
+    /* Caribe Turquoise */
+    --color-earth: #5A3A24;
+    /* Coffee Brown */
+    --color-leaf: #3E7F4F;
+    /* Green Accent */
+
+    /* Light Mode Colors */
+    --color-bg-light: #F5E9DA;
+    /* Warm Sand */
+    --color-surface-light: #FFFFFF;
+    --color-text-primary-light: #0F1A1C;
+    /* Dark text on light */
+    --color-text-secondary-light: #5A3A24;
+    /* Darker secondary */
+
+    /* Dark Mode Colors */
+    --color-bg-dark: #0F1A1C;
+    /* Night Caribbean */
+    --color-surface-dark: #1A2628;
+    --color-text-primary-dark: #F5E9DA;
+    /* Light text on dark */
+    --color-text-secondary-dark: #C9B8AB;
+    /* Mid sand */
+
+    /* Typography Tokens */
+    --font-display: "Alfa Slab One", serif;
+    --font-base: "Nunito Sans", "Inter", system-ui, sans-serif;
+
+    /* Additional Radius / Shadows / Transitions */
+    --radius-btn: 8px;
+    --shadow-card: 0 4px 10px -2px rgba(0, 0, 0, 0.35);
+    --transition-ui: 160ms cubic-bezier(.4, .2, .2, 1);
+
+    /* Type Scale */
+    --font-size-h1: clamp(2.8rem, 6vw, 3.8rem);
+    --font-size-h2: clamp(2.2rem, 4.5vw, 3rem);
+    --font-size-h3: 1.9rem;
+    --font-size-h4: 1.55rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.85rem;
+
   }
 }
