@@ -1,0 +1,8 @@
+<script lang="ts">
+</script>
+
+<svelte:head>
+  <title>Los Compits</title>
+</svelte:head>
+
+<h1>Home</h1>

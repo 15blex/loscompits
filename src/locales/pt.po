@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-15T12:38:45.542Z\n"
+"PO-Revision-Date: 2025-11-15T12:38:45.542Z\n"
+"Last-Translator: \n"
+"Language: pt\n"
+"Language-Team: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"MIME-Version: 1.0\n"
+
+#~ msgid "Welcome to SvelteKit"
+#~ msgstr ""
+
+#~ msgid "Visit <0>svelte.dev/docs/kit</0> to read the documentation"
+#~ msgstr ""
+
+#: src/routes/+layout.svelte
+#: src/routes/+page.svelte
+msgid "Home"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "Band"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "Bio"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "Media"
+msgstr ""
+
+#: src/routes/+layout.svelte
+msgid "© 2025 Los Compits"
+msgstr ""
+
+#: src/routes/+page.svelte
+msgid "Los Compits"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "La banda"
+msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid "Biografia"
+msgstr ""
+
+#: src/routes/media/+page.svelte
+msgid "Photos and Videos"
+msgstr ""
+
+#: src/routes/media/+page.svelte
+msgid "Los Compits - Media Gallery"
+msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid "Los Compits - Biografia"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Los Compits - La banda"
+msgstr ""
+
+#: src/routes/events/+page.svelte
+msgid "Los Compits - Events"
+msgstr ""
+
+#: src/routes/events/+page.svelte
+msgid "Events"
+msgstr ""

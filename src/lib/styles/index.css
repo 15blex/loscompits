@@ -1,0 +1,7 @@
+@layer reset, tokens, base, components, theme;
+
+@import "./reset.css" layer(reset);
+@import "./tokens.css" layer(tokens);
+@import "./base.css" layer(base);
+@import "./elements/index.css" layer(components);
+@import "./theme.css" layer(theme);

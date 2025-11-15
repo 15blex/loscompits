@@ -1,0 +1,117 @@
+@layer reset {
+	:root {
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-text-size-adjust: 100%;
+		interpolate-size: allow-keywords;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+  }
+
+	html:focus-within {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		min-height: 100dvh;
+		text-rendering: optimizeLegibility;
+		line-height: 1.5;
+		font-family: system-ui, "Segoe UI", sans-serif;
+		font-kerning: normal;
+		background-color: Canvas;
+		color: CanvasText;
+	}
+
+	:where(ul, ol)[role="list"],
+	:where(dl, menu)[role="list"] {
+		list-style: none;
+	}
+
+	:where(img, picture, svg, video, canvas) {
+		max-inline-size: 100%;
+		block-size: auto;
+		display: block;
+	}
+
+	svg:not([width]) {
+		inline-size: 100%;
+	}
+
+	:where(table) {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	:where(button, input, textarea, select) {
+		font: inherit;
+		color: inherit;
+	}
+
+	:where(textarea) {
+		resize: vertical;
+	}
+
+	:where(input[type="search"]) {
+		appearance: textfield;
+		-webkit-appearance: textfield;
+		outline-offset: 0.125rem;
+	}
+
+	:where(button, [role="button"]) {
+		cursor: pointer;
+		border: none;
+		background: none;
+	}
+
+	:where(a:not([class])) {
+		text-decoration-skip-ink: auto;
+	}
+
+	:where(a) {
+		color: currentColor;
+	}
+
+	:where(code, kbd, samp, pre) {
+		font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+		font-size: 0.925em;
+	}
+
+	:where(abbr[title]) {
+		text-decoration: underline dotted;
+	}
+
+	:where([hidden]) {
+		display: none !important;
+	}
+
+	:where(:focus-visible) {
+		outline: 2px solid currentColor;
+		outline-offset: 0.25rem;
+	}
+
+	:where(:focus:not(:focus-visible)) {
+		outline: none;
+	}
+
+	::selection {
+		background-color: color-mix(in srgb, currentColor 16%, transparent);
+	}
+
+	:where(dialog) {
+		border: none;
+		padding: 0;
+	}
+
+	:where(details > summary) {
+		list-style: none;
+	}
+}
