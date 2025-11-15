@@ -6,4 +6,7 @@
 
 main {
   flex: 1;
+  /* background: url('../assets/bg.jpeg'); */
+  background-position: center;
+  background-size: cover;
 }

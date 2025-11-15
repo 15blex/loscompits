@@ -1,0 +1,94 @@
+@layer theme {
+  :root {
+    color-scheme: light dark;
+
+    [data-mode="dark"] {
+      color-scheme: dark;
+    }
+  
+    [data-mode="light"] {
+      color-scheme: light;
+    } 
+  }
+
+  body {
+
+    --bg-primary: light-dark(var(--graphite-100), var(--graphite-900));
+    --bg-secondary: light-dark(#FFFFFF, var(--graphite-800));
+    --bg-tertiary: light-dark(var(--graphite-200), var(--graphite-700));
+    --bg-elevated: light-dark(#FFFFFF, var(--onyx-800));
+    
+    --text-primary: light-dark(var(--graphite-900), var(--graphite-100));
+    --text-secondary: light-dark(var(--graphite-700), var(--graphite-300));
+    --text-tertiary: light-dark(var(--graphite-600), var(--graphite-400));
+    --text-accent: light-dark(var(--azure-600), var(--azure-400));
+    --text-muted: light-dark(var(--graphite-500), var(--graphite-500));
+    
+    --accent-primary: light-dark(var(--azure-600), var(--azure-400));
+    --accent-secondary: light-dark(var(--teal-600), var(--teal-400));
+    --accent-success: light-dark(var(--emerald-600), var(--emerald-400));
+    --accent-warning: light-dark(var(--amber-600), var(--amber-400));
+    --accent-error: light-dark(var(--scarlet-600), var(--scarlet-400));
+    
+    --border-color: light-dark(var(--graphite-300), var(--graphite-700));
+    --border-color-strong: light-dark(var(--graphite-400), var(--graphite-600));
+    --border-color-subtle: light-dark(var(--graphite-200), var(--graphite-800));
+    
+    --shadow-sm: light-dark(0 1px 3px oklch(0% 0 0 / 0.1), 0 1px 3px oklch(0% 0 0 / 0.4));
+    --shadow-md: light-dark(0 4px 8px oklch(0% 0 0 / 0.12), 0 4px 8px oklch(0% 0 0 / 0.5));
+    --shadow-lg: light-dark(0 8px 16px oklch(0% 0 0 / 0.15), 0 8px 16px oklch(0% 0 0 / 0.6));
+
+    /* Spacing aliases */
+    --spacing-xs: var(--space-1);
+    --spacing-sm: var(--space-2);
+    --spacing-md: var(--space-4);
+    --spacing-lg: var(--space-6);
+    --spacing-xl: var(--space-8);
+    --spacing-2xl: var(--space-12);
+    --spacing-3xl: var(--space-16);
+
+    /* Border radius aliases */
+    --border-radius-none: var(--radius-none);
+    --border-radius-sm: var(--radius-sm);
+    --border-radius: var(--radius);
+    --border-radius-md: var(--radius-md);
+    --border-radius-lg: var(--radius-lg);
+    --border-radius-xl: var(--radius-xl);
+    --border-radius-2xl: var(--radius-2xl);
+    --border-radius-full: var(--radius-full);
+
+    /* Border width aliases */
+    --border-width-thin: var(--border-width);
+    --border-width: var(--border-width);
+    --border-width-thick: var(--border-width-2);
+
+    /* Shadow aliases */
+    --shadow-xs: var(--shadow-sm);
+    --shadow-sm: var(--shadow);
+    --shadow-md: var(--shadow-md);
+    --shadow-lg: var(--shadow-lg);
+    --shadow-xl: var(--shadow-xl);
+    --shadow-2xl: var(--shadow-2xl);
+    --shadow-inner: var(--shadow-inner);
+
+    /* Transition aliases */
+    --transition-fast: var(--transition-duration-fast) var(--transition-timing-ease);
+    --transition-normal: var(--transition-duration-normal) var(--transition-timing-ease);
+    --transition-slow: var(--transition-duration-slow) var(--transition-timing-ease-out);
+    --transition-duration: var(--transition-duration-normal);
+    --transition-timing: var(--transition-timing-ease-in-out);
+
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Droid Sans Mono', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'liga' 1, 'calt' 1, 'zero' 1;
+    
+    margin: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition-property: background-color, color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing);
+  }
+}

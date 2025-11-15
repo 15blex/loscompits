@@ -1,0 +1,11 @@
+header {
+  padding: var(--space-4);
+  nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  img {
+    max-width: 75px;
+  }
+}

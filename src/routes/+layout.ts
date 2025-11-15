@@ -4,9 +4,11 @@ import { loadLocale } from 'wuchale/load-utils'
 import '../locales/main.loader.svelte.js'
 
 import type { LayoutLoad } from './$types.js'
+import { get } from 'svelte/store'
+import { languageStore } from '$lib/stores.js'
 
 export const load: LayoutLoad = async ({url}) => {
-  const locale = url.searchParams.get('locale') ?? 'en'
+  const locale = get(languageStore)
   if (browser && locales.includes(locale)) {
     await loadLocale(locale)
   }

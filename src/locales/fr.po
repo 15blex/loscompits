@@ -18,59 +18,87 @@ msgstr ""
 #~ msgid "Visit <0>svelte.dev/docs/kit</0> to read the documentation"
 #~ msgstr ""
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 #: src/routes/+page.svelte
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Band"
-msgstr ""
+msgstr "Groupe"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Bio"
-msgstr ""
+msgstr "Bio"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Media"
-msgstr ""
+msgstr "Médias"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Footer.svelte
 msgid "© 2025 Los Compits"
-msgstr ""
+msgstr "© 2025 Los Compits"
 
 #: src/routes/+page.svelte
 msgid "Los Compits"
-msgstr ""
+msgstr "Los Compits"
 
 #: src/routes/band/+page.svelte
 msgid "La banda"
-msgstr ""
+msgstr "Le groupe"
 
 #: src/routes/bio/+page.svelte
 msgid "Biografia"
-msgstr ""
+msgstr "Biographie"
 
 #: src/routes/media/+page.svelte
 msgid "Photos and Videos"
-msgstr ""
+msgstr "Photos et Vidéos"
 
 #: src/routes/media/+page.svelte
 msgid "Los Compits - Media Gallery"
-msgstr ""
+msgstr "Los Compits - Galerie Média"
 
 #: src/routes/bio/+page.svelte
 msgid "Los Compits - Biografia"
-msgstr ""
+msgstr "Los Compits - Biographie"
 
 #: src/routes/band/+page.svelte
 msgid "Los Compits - La banda"
-msgstr ""
+msgstr "Los Compits - Le groupe"
 
 #: src/routes/events/+page.svelte
 msgid "Los Compits - Events"
-msgstr ""
+msgstr "Los Compits - Événements"
 
 #: src/routes/events/+page.svelte
 msgid "Events"
+msgstr "Événements"
+
+#: src/lib/components/Header.svelte
+msgid "English"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Español"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Français"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Català"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Italiano"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Deutsch"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "Português"
 msgstr ""

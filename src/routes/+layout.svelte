@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import favicon from '$lib/assets/favicon.svg';
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	import '$lib/styles/index.css';
 
@@ -22,19 +24,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<header>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/band">Band</a>
-		<a href="/bio">Bio</a>
-		<a href="/media">Media</a>
-	</nav>
-</header>
-
+<Header />
 <main>
 	{@render children()}
 </main>
-
-<footer>
-	<p>© 2025 Los Compits</p>
-</footer>
+<Footer />

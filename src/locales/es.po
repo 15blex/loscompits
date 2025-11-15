@@ -18,24 +18,24 @@ msgstr ""
 #~ msgid "Visit <0>svelte.dev/docs/kit</0> to read the documentation"
 #~ msgstr "Visit <0>svelte.dev/docs/kit</0> to read the documentation"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 #: src/routes/+page.svelte
 msgid "Home"
 msgstr "Home"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Band"
 msgstr "Band"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Bio"
 msgstr "Bio"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Header.svelte
 msgid "Media"
 msgstr "Media"
 
-#: src/routes/+layout.svelte
+#: src/lib/components/Footer.svelte
 msgid "© 2025 Los Compits"
 msgstr "© 2025 Los Compits"
 
@@ -74,3 +74,31 @@ msgstr "Los Compits - Events"
 #: src/routes/events/+page.svelte
 msgid "Events"
 msgstr "Events"
+
+#: src/lib/components/Header.svelte
+msgid "English"
+msgstr "English"
+
+#: src/lib/components/Header.svelte
+msgid "Español"
+msgstr "Español"
+
+#: src/lib/components/Header.svelte
+msgid "Français"
+msgstr "Français"
+
+#: src/lib/components/Header.svelte
+msgid "Català"
+msgstr "Català"
+
+#: src/lib/components/Header.svelte
+msgid "Italiano"
+msgstr "Italiano"
+
+#: src/lib/components/Header.svelte
+msgid "Deutsch"
+msgstr "Deutsch"
+
+#: src/lib/components/Header.svelte
+msgid "Português"
+msgstr "Português"

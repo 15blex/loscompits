@@ -1,5 +1,5 @@
 
-            export let c = ["Home","Band","Bio","Media","© 2025 Los Compits","Los Compits","La banda","Biografia","Photos and Videos","Los Compits - Media Gallery","Los Compits - Biografia","Los Compits - La banda","Los Compits - Events","Events"]
+            export let c = ["Accueil","Groupe","Bio","Médias","© 2025 Los Compits","Los Compits","Le groupe","Biographie","Photos et Vidéos","Los Compits - Galerie Média","Los Compits - Biographie","Los Compits - Le groupe","Los Compits - Événements","Événements","English","Español","Français","Català","Italiano","Deutsch","Português"]
             // only during dev, for HMR
             let latestVersion = -1
             // @ts-ignore
