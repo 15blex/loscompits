@@ -4,6 +4,7 @@ import { loadLocale } from 'wuchale/load-utils'
 import '../locales/main.loader.svelte.js'
 
 import type { LayoutLoad } from './$types.js'
+
 import { get } from 'svelte/store'
 import { language } from '$lib/stores.js'
 

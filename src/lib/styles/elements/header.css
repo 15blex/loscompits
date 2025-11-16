@@ -3,24 +3,80 @@ header {
   background: linear-gradient(135deg, color-mix(in oklab, var(--bg-primary), var(--accent-primary) 12%), var(--bg-primary));
   border-bottom: 1px solid var(--border-color-strong);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-4);
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--space-3);
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition-property: color;
+      transition-duration: var(--transition-duration-fast);
+
+      &:hover {
+        color: var(--accent-secondary);
+      }
+    }
+
+    img {
+      max-width: 75px;
+      border-radius: var(--radius);
+    }
+  }
+
+  #language-selector {
+    position: relative;
+    isolation: isolate;
+
+    button {
+      anchor-name: --languages;
+      text-align: left;
+    }
+
+    #languages {
+      inset: auto;
+      margin: 0;
+      position: absolute;
+      position-anchor: --languages;
+      position-try-fallbacks: --left;
+      top: anchor(bottom);
+      left: anchor(right);
+      width: max-content;
+      padding: var(--space-2);
+      gap: var(--space-1);
+      background: var(--bg-secondary);
+      opacity: 0;
+      border: 1px solid var(--border-color-strong);
+      border-radius: var(--radius);
+      transition-property: opacity, display;
+      transition-duration: 0.35s, 0.35s;
+      transition-behavior: allow-discrete;
+
+      &:popover-open {
+        display: grid;
+        opacity: 1;
+
+        @starting-style {
+          display: grid;
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
 
-header nav {
-  /* flattened for clarity */
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
+@position-try --left {
+  inset: unset;
+  top: anchor(bottom);
+  right: anchor(left);
 }
 
-header img {
-  max-width: 75px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
-}
-
-header select.language-select {
-  margin-left: auto;
+.active {
+  color: var(--accent-secondary);
 }

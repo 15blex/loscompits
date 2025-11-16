@@ -12,7 +12,6 @@
   }
 
   body {
-    /* Semantic theme variables using light-dark */
     --bg-primary: light-dark(var(--color-bg-light), var(--color-bg-dark));
     --bg-secondary: light-dark(var(--color-surface-light), var(--color-surface-dark));
     --bg-tertiary: var(--color-earth);

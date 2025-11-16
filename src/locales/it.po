@@ -75,33 +75,26 @@ msgstr "Los Compits - Eventi"
 msgid "Events"
 msgstr "Eventi"
 
-#: src/lib/components/Header.svelte
-msgid "English"
-msgstr ""
+#~ msgid "English"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Español"
-msgstr ""
+#~ msgid "Español"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Français"
-msgstr ""
+#~ msgid "Français"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Català"
-msgstr ""
+#~ msgid "Català"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Italiano"
-msgstr ""
+#~ msgid "Italiano"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Deutsch"
-msgstr ""
+#~ msgid "Deutsch"
+#~ msgstr ""
 
-#: src/lib/components/Header.svelte
-msgid "Português"
-msgstr ""
+#~ msgid "Português"
+#~ msgstr ""
 
 #: src/lib/components/Footer.svelte
 msgid "© 2025 Los Compits · Todos los derechos reservados"
@@ -111,11 +104,180 @@ msgstr ""
 msgid "Los Compits logo"
 msgstr ""
 
-#. placeholder {0}: $mode
-#: src/lib/components/Header.svelte
-msgid "Mode {0}"
-msgstr ""
+#~ msgid "Mode {0}"
+#~ msgstr ""
 
 #: src/routes/+page.svelte
 msgid "Cumbia, Salsa y Son Cubano"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇪🇸 Español"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇪🇸 Català"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇵🇹 Português"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇮🇹 Italiano"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇫🇷 Français"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇩🇪 Deutsch"
+msgstr ""
+
+#: src/lib/components/Header.svelte
+msgid "🇬🇧 English"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odit earum laborum culpa, velit, labore libero assumenda temporibus deleniti recusandae obcaecati voluptatem consequatur, quod dolor ducimus. Sunt adipisci cum nulla."
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Member 1"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Juan Pérez"
+msgstr ""
+
+#~ msgid "Vocalista"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Member 2"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "María Gómez"
+msgstr ""
+
+#~ msgid "Guitarrista"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Member 3"
+msgstr ""
+
+#~ msgid "Carlos Rodríguez"
+#~ msgstr ""
+
+#~ msgid "Bajista"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+#: src/routes/band/+page.svelte
+#: src/routes/band/+page.svelte
+msgid "Member 4"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Ana López"
+msgstr ""
+
+#~ msgid "Baterista"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Facundo López"
+msgstr ""
+
+#~ msgid "Cajon / Guitarra"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Lalo Rodríguez"
+msgstr ""
+
+#~ msgid "Contrabajista"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Jesus Cristo"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+#: src/routes/band/+page.svelte
+msgid "Trompeta"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Percusiones"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Contrabajo"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Guitarra"
+msgstr ""
+
+#~ msgid "Voz"
+#~ msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Cajon"
+msgstr ""
+
+#~ msgid ""
+#~ "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, sapiente cumque! Asperiores hic laudantium doloribus, illum eligendi nihil? Ad assumenda, cumque harum aperiam omnis et consequatur sapiente illum soluta accusamus!\n"
+#~ "Voluptatem omnis dolorem quos, animi maxime numquam nam dolore repellat esse, molestias repellendus consectetur illo ipsum alias ut perferendis nobis facere architecto fugiat eaque, iste quia assumenda aliquid! Laudantium, eaque.\n"
+#~ "Itaque inventore iusto, quisquam tempore labore quo repellendus repellat et animi suscipit qui ad maxime assumenda quidem, ipsum libero asperiores natus facilis! Accusantium molestiae, iste dolorem reprehenderit voluptatum animi ab.\n"
+#~ "Dolore ducimus repellendus ipsum animi eaque alias nulla dicta sunt minima. Commodi velit iure enim id quam, facere maiores doloribus amet. Sequi labore magnam cumque alias deserunt fugiat quia numquam.\n"
+#~ "Eligendi aliquid molestiae doloribus dolor nesciunt, non saepe veniam corporis vel dolorem quam soluta vero amet quisquam at molestias! Beatae porro velit quam facilis! Odit voluptatem saepe repudiandae nam nobis?\n"
+#~ "Ullam officiis consequatur repellendus voluptates consequuntur sapiente cupiditate? Magni expedita qui inventore! Sed, repellat eius quod quibusdam qui at dolore doloribus molestias minima laborum sint sequi sapiente nemo mollitia aliquid?\n"
+#~ "Sit, corporis. Quos reprehenderit optio totam est dolor ad tempore deserunt natus ea. Voluptatem non corporis rem inventore, magnam dolor quae consectetur beatae blanditiis ea sapiente veniam voluptate, quidem quo?\n"
+#~ "Dolores dolor veniam in alias tenetur non vel unde magnam deleniti velit rem cum doloribus vero dolorum quo, aliquam sed doloremque quam consectetur aperiam quod magni repellendus placeat totam! Magni.\n"
+#~ "Error harum, ipsa consectetur ab, earum quisquam natus iusto accusamus sapiente minus nobis expedita distinctio veniam? Nobis quae officiis, maxime quasi architecto consectetur eligendi nihil dolorum asperiores tempora ullam eveniet.\n"
+#~ "Blanditiis rerum, deleniti perspiciatis quam necessitatibus sapiente. Repudiandae, ab dolor tempora doloremque ut odio soluta, est unde ipsa totam ex officiis repellat expedita beatae rerum reprehenderit quam hic quo nulla!"
+#~ msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, sapiente cumque! Asperiores hic laudantium doloribus, illum eligendi nihil? Ad assumenda, cumque harum aperiam omnis et consequatur sapiente illum soluta accusamus!\n"
+"Voluptatem omnis dolorem quos, animi maxime numquam nam dolore repellat esse, molestias repellendus consectetur illo ipsum alias ut perferendis nobis facere architecto fugiat eaque, iste quia assumenda aliquid! Laudantium, eaque.\n"
+"Itaque inventore iusto, quisquam tempore labore quo repellendus repellat et animi suscipit qui ad maxime assumenda quidem, ipsum libero asperiores natus facilis! Accusantium molestiae, iste dolorem reprehenderit voluptatum animi ab.\n"
+"Dolore ducimus repellendus ipsum animi eaque alias nulla dicta sunt minima. Commodi velit iure enim id quam, facere maiores doloribus amet. Sequi labore magnam cumque alias deserunt fugiat quia numquam."
+msgstr ""
+
+#~ msgid ""
+#~ "Eligendi aliquid molestiae doloribus dolor nesciunt, non saepe veniam corporis vel dolorem quam soluta vero amet quisquam at molestias! Beatae porro velit quam facilis! Odit voluptatem saepe repudiandae nam nobis?\n"
+#~ "Ullam officiis consequatur repellendus voluptates consequuntur sapiente cupiditate? Magni expedita qui inventore! Sed, repellat eius quod quibusdam qui at dolore doloribus molestias minima laborum sint sequi sapiente nemo mollitia aliquid?\n"
+#~ "Sit, corporis. Quos reprehenderit optio totam est dolor ad tempore deserunt natus ea. Voluptatem non corporis rem inventore, magnam dolor quae consectetur beatae blanditiis ea sapiente veniam voluptate, quidem quo?\n"
+#~ "Dolores dolor veniam in alias tenetur non vel unde magnam deleniti velit rem cum doloribus vero dolorum quo, aliquam sed doloremque quam consectetur aperiam quod magni repellendus placeat totam! Magni.\n"
+#~ "Error harum, ipsa consectetur ab, earum quisquam natus iusto accusamus sapiente minus nobis expedita distinctio veniam? Nobis quae officiis, maxime quasi architecto consectetur eligendi nihil dolorum asperiores tempora ullam eveniet.\n"
+#~ "Blanditiis rerum, deleniti perspiciatis quam necessitatibus sapiente. Repudiandae, ab dolor tempora doloremque ut odio soluta, est unde ipsa totam ex officiis repellat expedita beatae rerum reprehenderit quam hic quo nulla!"
+#~ msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid "Seccion"
+msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid ""
+"Eligendi aliquid molestiae doloribus dolor nesciunt, non saepe veniam corporis vel dolorem quam soluta vero amet quisquam at molestias! Beatae porro velit quam facilis! Odit voluptatem saepe repudiandae nam nobis?\n"
+"Ullam officiis consequatur repellendus voluptates consequuntur sapiente cupiditate? Magni expedita qui inventore! Sed, repellat eius quod quibusdam qui at dolore doloribus molestias minima laborum sint sequi sapiente nemo mollitia aliquid?\n"
+"Sit, corporis. Quos reprehenderit optio totam est dolor ad tempore deserunt natus ea. Voluptatem non corporis rem inventore, magnam dolor quae consectetur beatae blanditiis ea sapiente veniam voluptate, quidem quo?\n"
+"Dolores dolor veniam in alias tenetur non vel unde magnam deleniti velit rem cum doloribus vero dolorum quo, aliquam sed doloremque quam consectetur aperiam quod magni repellendus placeat totam! Magni."
+msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid "Otra Seccion"
+msgstr ""
+
+#: src/routes/bio/+page.svelte
+msgid ""
+"Error harum, ipsa consectetur ab, earum quisquam natus iusto accusamus sapiente minus nobis expedita distinctio veniam? Nobis quae officiis, maxime quasi architecto consectetur eligendi nihil dolorum asperiores tempora ullam eveniet.\n"
+"Blanditiis rerum, deleniti perspiciatis quam necessitatibus sapiente. Repudiandae, ab dolor tempora doloremque ut odio soluta, est unde ipsa totam ex officiis repellat expedita beatae rerum reprehenderit quam hic quo nulla!"
 msgstr ""
