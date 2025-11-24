@@ -15,14 +15,14 @@
 	* {
 		margin: 0;
 		padding: 0;
-  }
+	}
 
 	html:focus-within {
 		scroll-behavior: smooth;
 	}
 
 	body {
-		min-height: 100dvh;
+		min-height: 100svh;
 		text-rendering: optimizeLegibility;
 		line-height: 1.5;
 		font-family: system-ui, "Segoe UI", sans-serif;
