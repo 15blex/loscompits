@@ -16,6 +16,7 @@
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.48.5",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@types/node": "^24.10.1",
 		"@wuchale/svelte": "^0.17.5",
 		"@wuchale/vite-plugin": "^0.15.3",
 		"gh-pages": "^6.3.0",

@@ -2,6 +2,7 @@
   import logo from '$lib/assets/logo.png';
 
   import { page } from '$app/state';
+	import { resolve } from '$app/paths';
   import { language, mode } from '$lib/stores';
   import { loadLocale } from 'wuchale/load-utils';
 
@@ -35,15 +36,7 @@
 	};
 
 	$effect(() => {
-		if (!document.startViewTransition) {
-			loadLocale($language);
-			return;
-		} else {
-			loadLocale($language);
-			document.startViewTransition(()=>{
-				document.getElementById('html')?.setAttribute('lang', $language);
-			});
-		}
+		loadLocale($language);
 	});
 
 	$effect(() => {
@@ -53,14 +46,14 @@
 
 <header>
 	<nav class="nav">
-		<a href="/" class="nav__link" aria-label="Home" class:active="{page.route.id === '/'}">
+		<a href={resolve('/')} class="nav__link" aria-label="Home" class:active="{page.route.id === '/'}">
       <img src={logo} alt="Los Compits logo">
     </a>
-		<a href="/" class="nav__link" class:active="{page.route.id === '/'}">Home</a>
-		<a href="/band" class="nav__link" class:active="{page.route.id === '/band'}">Band</a>
-		<a href="/bio" class="nav__link" class:active="{page.route.id === '/bio'}">Bio</a>
-		<a href="/media" class="nav__link" class:active="{page.route.id === '/media'}">Media</a>
-    <a href="/events" class="nav__link" class:active="{page.route.id === '/events'}">Events</a>
+		<a href={resolve('/')} class="nav__link" class:active="{page.route.id === '/'}">Home</a>
+		<a href={resolve('/band')} class="nav__link" class:active="{page.route.id === '/band'}">Band</a>
+		<a href={resolve('/bio')} class="nav__link" class:active="{page.route.id === '/bio'}">Bio</a>
+		<a href={resolve('/media')} class="nav__link" class:active="{page.route.id === '/media'}">Media</a>
+    <a href={resolve('/events')} class="nav__link" class:active="{page.route.id === '/events'}">Events</a>
 	</nav>
 	<div id="language-selector">
 		<button popovertarget="languages">

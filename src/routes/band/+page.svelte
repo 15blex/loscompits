@@ -15,45 +15,45 @@
 
   <div id="band">
     <div class="member">
-      <img src={facu} alt="Member 1">
+      <img src={marco} alt="Member 1">
       <div class="info">
-        <h2>Juan Pérez</h2>
-        <p>Trompeta</p>
+        <h2>Omar Alejandro Ramos Narváez</h2>
+        <p>Percusiones - Voz</p>
       </div>
     </div>
     <div class="member">
-      <img src={marco} alt="Member 2">
+      <img src={facu} alt="Member 2">
       <div class="info">
-        <h2>María Gómez</h2>
-        <p>Guitarra</p>
+        <h2>Facundo López</h2>
+        <p>Percusión - Voz</p>
       </div>
     </div>
     <div class="member">
       <img src={lalo} alt="Member 3">
       <div class="info">
-        <h2>Lalo Rodríguez</h2>
-        <p>Contrabajo</p>
+        <h2>Ricardo Garcia Gutierrez</h2>
+        <p>Trompeta </p>
       </div>
     </div>
     <div class="member">
       <img src={jesus} alt="Member 4">
       <div class="info">
-        <h2>Ana López</h2>
-        <p>Percusiones</p>
+        <h2>Lucas Raiquen Pereyra</h2>
+        <p>Trompeta </p>
       </div>
     </div>
     <div class="member">
       <img src={facu} alt="Member 4">
       <div class="info">  
-        <h2>Facundo López</h2>
-        <p>Cajon</p>
+        <h2>Abraham Ruvalcaba</h2>
+        <p>Guitarra - Voz</p>
       </div>
     </div>
     <div class="member">
-      <img src={facu} alt="Member 4">
+      <img src={lalo} alt="Lalo Abbadié">
       <div class="info">
-        <h2>Jesus Cristo</h2>
-        <p>Trompeta</p>
+        <h2>Lalo Abbadié</h2>
+        <p>Contrabajo - Voz</p>
       </div>
     </div>
   </div>
