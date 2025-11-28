@@ -147,9 +147,8 @@ msgstr ""
 msgid "Member 1"
 msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Juan Pérez"
-msgstr ""
+#~ msgid "Juan Pérez"
+#~ msgstr ""
 
 #~ msgid "Vocalista"
 #~ msgstr ""
@@ -158,9 +157,8 @@ msgstr ""
 msgid "Member 2"
 msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "María Gómez"
-msgstr ""
+#~ msgid "María Gómez"
+#~ msgstr ""
 
 #~ msgid "Guitarrista"
 #~ msgstr ""
@@ -177,13 +175,11 @@ msgstr ""
 
 #: src/routes/band/+page.svelte
 #: src/routes/band/+page.svelte
-#: src/routes/band/+page.svelte
 msgid "Member 4"
 msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Ana López"
-msgstr ""
+#~ msgid "Ana López"
+#~ msgstr ""
 
 #~ msgid "Baterista"
 #~ msgstr ""
@@ -195,40 +191,34 @@ msgstr ""
 #~ msgid "Cajon / Guitarra"
 #~ msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Lalo Rodríguez"
-msgstr ""
+#~ msgid "Lalo Rodríguez"
+#~ msgstr ""
 
 #~ msgid "Contrabajista"
 #~ msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Jesus Cristo"
-msgstr ""
+#~ msgid "Jesus Cristo"
+#~ msgstr ""
 
 #: src/routes/band/+page.svelte
 #: src/routes/band/+page.svelte
 msgid "Trompeta"
 msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Percusiones"
-msgstr ""
+#~ msgid "Percusiones"
+#~ msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Contrabajo"
-msgstr ""
+#~ msgid "Contrabajo"
+#~ msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Guitarra"
-msgstr ""
+#~ msgid "Guitarra"
+#~ msgstr ""
 
 #~ msgid "Voz"
 #~ msgstr ""
 
-#: src/routes/band/+page.svelte
-msgid "Cajon"
-msgstr ""
+#~ msgid "Cajon"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, sapiente cumque! Asperiores hic laudantium doloribus, illum eligendi nihil? Ad assumenda, cumque harum aperiam omnis et consequatur sapiente illum soluta accusamus!\n"
@@ -280,4 +270,49 @@ msgstr ""
 msgid ""
 "Error harum, ipsa consectetur ab, earum quisquam natus iusto accusamus sapiente minus nobis expedita distinctio veniam? Nobis quae officiis, maxime quasi architecto consectetur eligendi nihil dolorum asperiores tempora ullam eveniet.\n"
 "Blanditiis rerum, deleniti perspiciatis quam necessitatibus sapiente. Repudiandae, ab dolor tempora doloremque ut odio soluta, est unde ipsa totam ex officiis repellat expedita beatae rerum reprehenderit quam hic quo nulla!"
+msgstr ""
+
+#: src/routes/+page.svelte
+msgid "Los Compit's es una banda, la cual se fundó y nos encontramos tanto en la calle y fuera de nuestras tierras. Sin embargo nos consideramos Carnales. Países como México y Argentina y también de distintas Provincias... Como por ejemplo Cordoba (Argentina), Mar de Plata (Argentina), Monterrey (México), San Luis Potosí (México), Distrito Federal (México) y también de las afueras de la ciudad (D.F.). Intentando mandar un mensaje: tanto musical pero a la vez Social sin camuflajear nuestros Principios"
+msgstr ""
+
+#: src/routes/+page.svelte
+msgid "En este proyecto nos interesa reunir nuestras facultades y conseguir expandir nuestra música El nombre de esto fue elegido de la amistad. Es por ello que nos llamamos Los Compit's"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Omar Alejandro Ramos Narváez"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Percusiones - Voz"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Percusión - Voz"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Ricardo Garcia Gutierrez"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Lucas Raiquen Pereyra"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Abraham Ruvalcaba"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Guitarra - Voz"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+#: src/routes/band/+page.svelte
+msgid "Lalo Abbadié"
+msgstr ""
+
+#: src/routes/band/+page.svelte
+msgid "Contrabajo - Voz"
 msgstr ""

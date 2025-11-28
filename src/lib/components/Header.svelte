@@ -3,15 +3,19 @@
 
   import { page } from '$app/state';
 	import { resolve } from '$app/paths';
-  import { language, mode } from '$lib/stores';
   import { loadLocale } from 'wuchale/load-utils';
+  import { onMount } from 'svelte';
 
 	let popoverElement: HTMLDivElement | null = null;
 
+  let mode = $state('light');
+  let language = $state('es');
+  
   const toggleMode = () => {
     document.startViewTransition(()=>{
-      mode.update((current) => (current === 'light' ? 'dark' : 'light'));
-      document.body.setAttribute('data-mode', $mode);
+      mode = mode === 'light' ? 'dark' : 'light';
+      localStorage.setItem('mode', mode);
+			document.documentElement.style.colorScheme = mode;
     })
   };
 
@@ -29,18 +33,24 @@
   };
 
 	const selectLanguage = (lang: 'en' | 'es' | 'fr' | 'ca' | 'it' | 'de' | 'pt') => {
-		language.set(lang);
-		if (popoverElement) {
-			popoverElement.hidePopover();
-		}
+    document.startViewTransition(()=>{
+      language = lang;
+      localStorage.setItem('language', lang);
+      if (popoverElement) {
+        popoverElement.hidePopover();
+      }
+    })
 	};
 
-	$effect(() => {
-		loadLocale($language);
-	});
+  onMount(()=>{
+    mode = localStorage.getItem('mode') || 'light';
+    language = localStorage.getItem('language') || 'es';
+    document.documentElement.style.colorScheme = mode;
+    loadLocale(language);
+  })
 
 	$effect(() => {
-		document.body.setAttribute('data-mode', $mode);
+		loadLocale(language);
 	});
 </script>
 
@@ -57,7 +67,7 @@
 	</nav>
 	<div id="language-selector">
 		<button popovertarget="languages">
-			{getFlag($language)}
+			{getFlag(language)}
 		</button>
 		<div popover id="languages" bind:this={popoverElement}>
 			<button onclick={() => selectLanguage('es')}>🇪🇸 Español</button>
@@ -70,10 +80,96 @@
 		</div>
 	</div>
   <button onclick={toggleMode}>
-    {#if $mode === 'light'}
+    {#if mode === 'light'}
       🌙
     {:else}
       ☀️
     {/if}
   </button>
 </header>
+
+<style>
+	header {
+  padding: var(--space-4);
+  background: linear-gradient(135deg, color-mix(in oklab, var(--bg-primary), var(--accent-primary) 12%), var(--bg-primary));
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to right, var(--red-600), var(--gold-500), var(--green-600)) 1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--space-4);
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--space-3);
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition-property: color;
+      transition-duration: var(--transition-duration-fast);
+
+      &:hover {
+        color: var(--accent-secondary);
+      }
+    }
+
+    img {
+      max-width: 75px;
+      border-radius: var(--radius);
+    }
+  }
+
+  #language-selector {
+    position: relative;
+    isolation: isolate;
+
+    button {
+      anchor-name: --languages;
+      text-align: left;
+    }
+
+    #languages {
+      inset: auto;
+      margin: 0;
+      position: absolute;
+      position-anchor: --languages;
+      position-try-fallbacks: --left;
+      top: anchor(bottom);
+      left: anchor(right);
+      width: max-content;
+      padding: var(--space-2);
+      gap: var(--space-1);
+      background: var(--bg-secondary);
+      opacity: 0;
+      border: 1px solid var(--border-color-strong);
+      border-radius: var(--radius);
+      transition-property: opacity, display;
+      transition-duration: 0.35s, 0.35s;
+      transition-behavior: allow-discrete;
+
+      &:popover-open {
+        display: grid;
+        opacity: 1;
+
+        @starting-style {
+          display: grid;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@position-try --left {
+  inset: unset;
+  top: anchor(bottom);
+  right: anchor(left);
+}
+
+.active {
+  color: var(--accent-secondary);
+}
+</style>

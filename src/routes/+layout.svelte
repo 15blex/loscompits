@@ -7,16 +7,6 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 
-	import '$lib/styles/index.css';
-
-	import { mode } from '$lib/stores'
-
-	onMount(() => {
-		if (!mode) {
-			document.body.setAttribute('data-mode', mode);
-		}
-	});
-
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
@@ -40,3 +30,12 @@
 	{@render children()}
 </main>
 <Footer />
+
+<style>
+	:global(#root) {
+	}
+
+	main {
+		padding: var(--space-4);
+	}
+</style>
