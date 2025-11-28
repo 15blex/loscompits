@@ -1,34 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" id="html">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
-		
-		<link href="../_app/immutable/assets/0.BVElQzKC.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.DcoCXUni.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/N1WxqQSw.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DwkUJIWB.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/B_QgdkES.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.DxX5-BOW.js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+      }
+
+      :root {
+        color-scheme: light dark;
+        interpolate-size: allow-keywords;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Spacing */
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --space-24: 6rem;
+        --space-32: 8rem;
+
+        /* Border Radius */
+        --radius-none: 0;
+        --radius-sm: 0.125rem;
+        --radius: 0.25rem;
+        --radius-md: 0.375rem;
+        --radius-lg: 0.5rem;
+        --radius-xl: 0.75rem;
+        --radius-2xl: 1rem;
+        --radius-3xl: 1.5rem;
+        --radius-full: 9999px;
+
+        /* Border Width */
+        --border-width: 1px;
+        --border-width-2: 2px;
+        --border-width-4: 4px;
+        --border-width-8: 8px;
+
+        /* Shadows */
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+        --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+        /* Transitions */
+        --transition-duration-fast: 150ms;
+        --transition-duration-normal: 300ms;
+        --transition-duration-slow: 500ms;
+        --transition-timing-ease: ease;
+        --transition-timing-ease-in: ease-in;
+        --transition-timing-ease-out: ease-out;
+        --transition-timing-ease-in-out: ease-in-out;
+        --transition-timing-linear: linear;
+
+        /* Typography Tokens */
+        --font-display: "Alfa Slab One", serif;
+        --font-base: "Nunito Sans", "Inter", system-ui, sans-serif;
+
+        /* Additional Radius / Shadows / Transitions */
+        --radius-btn: 8px;
+        --shadow-card: 0 4px 10px -2px rgba(0, 0, 0, 0.35);
+        --transition-ui: 160ms cubic-bezier(0.4, 0.2, 0.2, 1);
+
+        /* Type Scale */
+        --font-size-h1: clamp(2.8rem, 6vw, 3.8rem);
+        --font-size-h2: clamp(2.2rem, 4.5vw, 3rem);
+        --font-size-h3: 1.9rem;
+        --font-size-h4: 1.55rem;
+        --font-size-body: 1rem;
+        --font-size-small: 0.85rem;
+
+        /* Color Tokens - Cumbia/Salsa/Reggae Theme */
+
+        /* 1. Salsa Red (Passion/Energy) */
+        --red-100: oklch(95% 0.05 25);
+        --red-200: oklch(88% 0.12 25);
+        --red-300: oklch(80% 0.18 25);
+        --red-400: oklch(70% 0.22 25);
+        --red-500: oklch(60% 0.24 25);
+        --red-600: oklch(50% 0.22 25);
+        --red-700: oklch(40% 0.19 25);
+        --red-800: oklch(30% 0.15 25);
+        --red-900: oklch(20% 0.1 25);
+
+        /* 2. Sun Gold (Rhythm/Warmth) */
+        --gold-100: oklch(98% 0.05 85);
+        --gold-200: oklch(92% 0.12 85);
+        --gold-300: oklch(86% 0.18 85);
+        --gold-400: oklch(80% 0.22 85);
+        --gold-500: oklch(75% 0.2 85);
+        --gold-600: oklch(65% 0.18 85);
+        --gold-700: oklch(55% 0.15 85);
+        --gold-800: oklch(45% 0.12 85);
+        --gold-900: oklch(35% 0.09 85);
+
+        /* 3. Reggae Green (Nature/Vibe) */
+        --green-100: oklch(96% 0.05 145);
+        --green-200: oklch(90% 0.1 145);
+        --green-300: oklch(82% 0.16 145);
+        --green-400: oklch(72% 0.2 145);
+        --green-500: oklch(62% 0.22 145);
+        --green-600: oklch(52% 0.2 145);
+        --green-700: oklch(42% 0.16 145);
+        --green-800: oklch(32% 0.12 145);
+        --green-900: oklch(22% 0.08 145);
+
+        /* 4. Caribbean Blue (Sea/Sky) */
+        --blue-100: oklch(96% 0.04 230);
+        --blue-200: oklch(90% 0.08 230);
+        --blue-300: oklch(82% 0.12 230);
+        --blue-400: oklch(72% 0.16 230);
+        --blue-500: oklch(62% 0.18 230);
+        --blue-600: oklch(52% 0.18 230);
+        --blue-700: oklch(42% 0.16 230);
+        --blue-800: oklch(32% 0.14 230);
+        --blue-900: oklch(22% 0.1 230);
+
+        /* 5. Cuban Earth (Roots/Son) */
+        --earth-100: oklch(96% 0.02 50);
+        --earth-200: oklch(88% 0.04 50);
+        --earth-300: oklch(78% 0.07 50);
+        --earth-400: oklch(68% 0.1 50);
+        --earth-500: oklch(58% 0.12 50);
+        --earth-600: oklch(48% 0.11 50);
+        --earth-700: oklch(38% 0.09 50);
+        --earth-800: oklch(28% 0.07 50);
+        --earth-900: oklch(18% 0.05 50);
+
+        /* 6. Neutral (Base) */
+        --neutral-100: oklch(98% 0.005 260);
+        --neutral-200: oklch(92% 0.01 260);
+        --neutral-300: oklch(84% 0.02 260);
+        --neutral-400: oklch(70% 0.03 260);
+        --neutral-500: oklch(55% 0.04 260);
+        --neutral-600: oklch(40% 0.04 260);
+        --neutral-700: oklch(30% 0.03 260);
+        --neutral-800: oklch(20% 0.02 260);
+        --neutral-900: oklch(10% 0.01 260);
+
+        /* Semantic Colors */
+        --color-primary: var(--red-600);
+        --color-secondary: var(--gold-500);
+        --color-accent: var(--green-600);
+        --color-earth: var(--earth-600);
+        --color-leaf: var(--green-500);
+
+        /* Light Theme */
+        --color-bg-light: var(--gold-100);
+        --color-surface-light: #ffffff;
+        --color-text-primary-light: var(--earth-900);
+        --color-text-secondary-light: var(--earth-700);
+
+        /* Dark Theme */
+        --color-bg-dark: var(--earth-900);
+        --color-surface-dark: var(--earth-800);
+        --color-text-primary-dark: var(--gold-100);
+        --color-text-secondary-dark: var(--gold-200);
+      }
+
+      body {
+        --bg-primary: light-dark(var(--color-bg-light), var(--color-bg-dark));
+        --bg-secondary: light-dark(
+          var(--color-surface-light),
+          var(--color-surface-dark)
+        );
+        --bg-tertiary: var(--color-earth);
+        --bg-elevated: light-dark(
+          var(--color-surface-light),
+          var(--color-surface-dark)
+        );
+
+        --text-primary: light-dark(
+          var(--color-text-primary-light),
+          var(--color-text-primary-dark)
+        );
+        --text-secondary: light-dark(
+          var(--color-text-secondary-light),
+          var(--color-text-secondary-dark)
+        );
+        --text-tertiary: var(--color-leaf);
+        --text-accent: var(--color-accent);
+        --text-muted: light-dark(
+          var(--color-text-secondary-light),
+          var(--color-text-secondary-dark)
+        );
+
+        --accent-primary: var(--color-primary);
+        --accent-secondary: var(--color-accent);
+        --accent-success: var(--color-leaf);
+        --accent-warning: var(--color-secondary);
+        --accent-error: var(--color-primary);
+
+        --border-color: light-dark(
+          var(--color-surface-light),
+          var(--color-surface-dark)
+        );
+        --border-color-strong: var(--color-earth);
+        --border-color-subtle: light-dark(
+          var(--color-bg-light),
+          var(--color-bg-dark)
+        );
+        min-height: 100svh;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-base);
+        font-size: var(--font-size-body);
+        line-height: 1.55;
+        letter-spacing: 0.01em;
+        -webkit-font-smoothing: antialiased;
+        margin: 0;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color var(--transition-ui),
+          color var(--transition-ui);
+      }
+
+      main {
+        flex: 1;
+        display: grid;
+        place-content: center;
+        place-items: center;
+        background-image: linear-gradient(
+          to bottom right,
+          rgba(255, 0, 0, 0.05),
+          rgba(255, 215, 0, 0.05),
+          rgba(0, 128, 0, 0.05)
+        );
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      section {
+        padding: var(--space-8);
+        text-align: center;
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+
+        p {
+          margin-top: var(--space-8);
+          font-size: var(--font-size-lg);
+          max-width: 80ch;
+          margin-inline: auto;
+          margin-block: var(--space-8);
+        }
+      }
+
+      h1 {
+        font-family: "DynaPuff", system-ui;
+        font-size: var(--font-size-h1);
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+        background: linear-gradient(
+          to right,
+          var(--green-600),
+          var(--gold-500),
+          var(--red-600)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+      }
+
+      h2 {
+        font-family: "DynaPuff", system-ui;
+        font-size: var(--font-size-h2);
+        line-height: 1.1;
+        letter-spacing: -0.25px;
+        margin-top: var(--space-4);
+      }
+
+      h3 {
+        font-family: "DynaPuff", system-ui;
+        font-size: var(--font-size-h3);
+        line-height: 1.1;
+        margin-top: var(--space-4);
+      }
+
+      :focus-visible {
+        outline-offset: 2px;
+      }
+      :not(:focus-visible) {
+        outline: none;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        max-width: 100%;
+        display: block;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      summary {
+        list-style: none;
+      }
+    </style>
+    
+		<link href="../_app/immutable/assets/0.BId82phE.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.DPVAUeBp.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Czbh0Xon.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DGCvinPH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DkmMfu_1.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.BxWYHJ5r.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/PPVm8Dsz.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/DsnmJJEf.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/TaAx5Zgr.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.CAKsvwgE.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/DFoy5_as.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CpkclMQF.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/cR1Odziq.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/6.D5fICTN7.js"><!--12qhfyh--><link rel="icon" href="/loscompits/_app/immutable/assets/favicon.683TpEwv.png"/><!----><!--14bqwv7--><!----><title></title>
-	</head>
-	<body data-mode="light" data-sveltekit-preload-data="hover">
-		<div id="root"><!--[--><!--[--><!----><header><nav class="nav"><a href="../" class="nav__link" aria-label=""><img src="/loscompits/_app/immutable/assets/logo.CBvNJdsi.png" alt=""/></a> <a href="../" class="nav__link"></a> <a href="../band" class="nav__link"></a> <a href="../bio" class="nav__link"></a> <a href="../media" class="nav__link active"></a> <a href="../events" class="nav__link"></a></nav> <div id="language-selector"><button popovertarget="languages">🇪🇸</button> <div popover="" id="languages"><button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button></div></div> <button><!--[-->🌙<!--]--></button></header><!----> <main><!----><h1></h1><!----><!----></main> <footer><p></p></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+		<link rel="modulepreload" href="../_app/immutable/chunks/DJNYaWV9.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Bmh3sV_B.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/BuQEhdlN.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/IHPM1VIO.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/DbOuoCfP.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.CJ-4Rswd.js"><!--12qhfyh--><link rel="icon" href="/loscompits/_app/immutable/assets/favicon.683TpEwv.png"/><!----><!--14bqwv7--><!----><title></title>
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[--><!----><header class="svelte-1elxaub"><nav class="nav svelte-1elxaub"><a href="../" class="nav__link svelte-1elxaub" aria-label=""><img src="/loscompits/_app/immutable/assets/logo.CBvNJdsi.png" alt="" class="svelte-1elxaub"/></a> <a href="../" class="nav__link svelte-1elxaub"></a> <a href="../band" class="nav__link svelte-1elxaub"></a> <a href="../bio" class="nav__link svelte-1elxaub"></a> <a href="../media" class="nav__link svelte-1elxaub active"></a> <a href="../events" class="nav__link svelte-1elxaub"></a></nav> <div id="language-selector" class="svelte-1elxaub"><button popovertarget="languages" class="svelte-1elxaub">🇪🇸</button> <div popover="" id="languages" class="svelte-1elxaub"><button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button> <button class="svelte-1elxaub"></button></div></div> <button><!--[-->🌙<!--]--></button></header><!----> <main class="svelte-12qhfyh"><!----><h1></h1><!----><!----></main> <footer class="svelte-jz8lnl"><p></p></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_qyiur8 = {
+					__sveltekit_12wc3jv = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						assets: "/loscompits"
 					};
@@ -36,8 +383,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.DcoCXUni.js"),
-						import("../_app/immutable/entry/app.DxX5-BOW.js")
+						import("../_app/immutable/entry/start.DPVAUeBp.js"),
+						import("../_app/immutable/entry/app.BxWYHJ5r.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
@@ -49,5 +396,5 @@
 				}
 			</script>
 		</div>
-	</body>
+  </body>
 </html>
