@@ -34,6 +34,35 @@
       display: flex;
       list-style: none;
       gap: var(--space-md);
+      align-items: center;
     }
   }
+
+  header {
+    padding: var(--space-md);
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-1);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-primary-500);
+    }
+
+    &.active {
+      color: var(--color-primary-500);
+      text-decoration: underline;
+      text-decoration-color: var(--color-secondary-500);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+  }
+
 }
