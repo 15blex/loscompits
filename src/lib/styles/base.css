@@ -1,0 +1,39 @@
+@layer base {
+  html:activating-view-transition {
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    
+    font-family: var(--font-sans);
+    background-color: var(--bg-surface-1);
+    color: var(--text-2);
+    line-height: var(--line-height-base);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    text-wrap: balance;
+  }
+
+  main {
+    flex: 1 0 auto;
+    width: 100%;
+    margin-inline: auto;
+    /* Optional: max-width wrapper if needed globally, or leave to layout components */
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: var(--space-md);
+    }
+  }
+}
