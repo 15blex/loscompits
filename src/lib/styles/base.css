@@ -26,21 +26,284 @@
     flex: 1 0 auto;
     width: 100%;
     margin-inline: auto;
-    /* Optional: max-width wrapper if needed globally, or leave to layout components */
+    padding: var(--container-padding);
+    max-width: var(--container-width);
+    /* display: grid;  <-- Removed to allow normal flow */
+    /* place-content: center; */
   }
 
-  nav {
+  /* 
+   * FOOTER
+   */
+  .site-footer {
+    /* 
+     * Footer Background:
+     * Light Mode -> Neutral 900 (Dark Contrast)
+     * Dark Mode -> Neutral 950 (Deep Contrast against Neutral 900 Body)
+     */
+    background-color: light-dark(var(--color-neutral-900), var(--color-neutral-950));
+    color: var(--color-neutral-100);
+    padding-block: var(--space-2xl) var(--space-xl);
+    margin-top: auto; /* Push to bottom if content is short */
+  }
+
+  .footer-inner {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-brand {
+    .footer-logo {
+      font-family: 'Shrikhand', cursive;
+      font-size: var(--font-size-2xl);
+      color: var(--color-primary-500); /* Pop color */
+      margin-bottom: var(--space-xs);
+    }
+    .tagline {
+      color: var(--color-neutral-400);
+      max-width: 30ch;
+    }
+  }
+
+  .footer-nav, .footer-socials {
+    h3 {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--space-md);
+      color: var(--color-neutral-000);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    a {
+      color: var(--color-neutral-400);
+      font-family: var(--font-sans); /* Override generic heading font for links */
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-size-md);
+      transition: color var(--transition-fast);
+
+      &:hover {
+        color: var(--color-secondary-500); /* Gold hover */
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--space-md);
+    
+    a {
+      display: inline-flex;
+      padding: var(--space-xs);
+      border-radius: var(--radius-full);
+      background-color: var(--color-neutral-800);
+      color: var(--color-neutral-200);
+      
+      &:hover {
+        background-color: var(--color-primary-500);
+        color: var(--color-neutral-950);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--color-neutral-800);
+    padding-top: var(--space-lg);
+    text-align: center;
+    color: var(--color-neutral-500);
+    font-size: var(--font-size-sm);
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+  }
+
+  /* 
+   * HEADER & NAVIGATION LAYOUT 
+   */
+  /* 
+   * HEADER & NAVIGATION LAYOUT 
+   */
+  .site-header {
+    padding: var(--space-md);
+    /* Colorful Header: Funky Purple in Light, Darker Purple in Dark */
+    background-color: light-dark(var(--color-primary-600), var(--color-neutral-950));
+    color: var(--color-neutral-050); /* Always light text on dark/colored bg */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin-inline: auto;
+  }
+
+  /* Mobile First: Nav hidden/overlay */
+  .site-nav {
+    /* Layout & Box Model */
+    /* display: none;  <-- Removed to allow visibility transition */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: var(--space-md);
+    
+    /* Appearance - Adaptive Surface */
+    background-color: var(--bg-surface-1);
+    box-shadow: var(--shadow-lg);
+    
+    /* Animation Initial State (Closed) */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    
+    /* Transition Settings */
+    /* Visibility transitions at the *end* of the curve when hiding */
+    transition: 
+      visibility 0.3s, 
+      opacity 0.3s ease-out, 
+      transform 0.3s ease-out;
+
+    /* OPEN STATE */
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      /* No starting-style needed for visibility typically, but simple toggle works */
+    }
+
     ul {
       display: flex;
+      flex-direction: column;
       list-style: none;
       gap: var(--space-md);
       align-items: center;
     }
+    
+    /* Ensure links in mobile menu (which has surface-1 bg) use default text color */
+    a {
+       color: var(--text-1);
+       
+       &:hover { color: var(--color-primary-500); }
+       &.active { color: var(--color-primary-500); }
+    }
+    
+    /* Theme Toggle inside mobile menu needs to be visible */
+    .theme-toggle-item button {
+        color: var(--text-1);
+    }
   }
 
-  header {
-    padding: var(--space-md);
+  /* Hamburger Button - White on Header */
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-xs);
+    
+    .hamburger {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: var(--color-neutral-050); /* White hamburger */
+      position: relative;
+      transition: background-color 0.3s;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-neutral-050); /* White hamburger */
+        transition: transform 0.3s;
+      }
+
+      &::before { transform: translateY(-8px); }
+      &::after { transform: translateY(8px); }
+    }
+
+    &[aria-expanded="true"] .hamburger {
+      background-color: transparent;
+      
+      /* When open, the button is still over the header, but menu is below */
+      /* So we keep it white */
+      &::before { transform: rotate(45deg); }
+      &::after { transform: rotate(-45deg); }
+    }
   }
+
+  @media (min-width: 768px) {
+    .nav-toggle {
+      display: none;
+    }
+
+    .site-nav {
+      position: static;
+      display: block; /* Always visible */
+      width: auto;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+      
+      /* Reset mobile animations */
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      transition: none;
+
+      ul {
+        flex-direction: row;
+        gap: var(--space-md);
+      }
+      
+      /* Desktop Links: On purple background, need white text */
+      a {
+        color: var(--color-neutral-050);
+        
+        &:hover {
+             color: var(--color-secondary-500); /* Gold hover on Purple */
+        }
+        
+        &.active {
+             color: var(--color-secondary-500); /* Active Gold */
+        }
+      }
+       
+      /* Theme Toggle on Desktop (Purple BG) -> White Icon */
+       .theme-toggle-item button {
+          color: var(--color-neutral-050);
+          
+          &:hover {
+              color: var(--color-secondary-500);
+          }
+       }
+    }
+    
+    /* Enable sliding underline only on Desktop */
+    a.active::after {
+      view-transition-name: active-nav-underline;
+      background-color: var(--color-secondary-500); /* Gold underline */
+    }
+  }
+
+
 
   a {
     display: inline-flex;
@@ -52,17 +315,115 @@
     font-size: var(--font-size-lg);
     transition: color var(--transition-fast);
 
+    position: relative; /* Needed for absolute positioning of ::after */
+
     &:hover {
       color: var(--color-primary-500);
     }
 
     &.active {
       color: var(--color-primary-500);
-      text-decoration: underline;
-      text-decoration-color: var(--color-secondary-500);
-      text-decoration-thickness: 3px;
-      text-underline-offset: 4px;
+      /* Remove standard underline to use pseudo-element for animation */
+      text-decoration: none;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-secondary-500);
+        /* view-transition-name moved to desktop query */
+        border-radius: var(--radius-full);
+      }
     }
   }
 
+  /*
+   * CONTENT PAGES STYLING
+   */
+  
+  /* Generic Section/Article formatting */
+  section {
+    width: 100%;
+    margin-block: var(--space-xl);
+    
+    h1 {
+      font-size: var(--font-size-3xl);
+      color: var(--color-primary-500);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  /* Bio & Text Content */
+  article p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
+    max-width: 65ch; /* Optimal reading width */
+    margin-inline: auto;
+    margin-bottom: var(--space-md);
+  }
+
+  /* BAND PAGE - Grid & Cards */
+  /* Assuming article is the container for members as per snippet */
+  section:has(.member) article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    width: 100%;
+  }
+
+  .member {
+    background-color: var(--bg-surface-2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      
+      img {
+        scale: 1.05;
+      }
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+      background-color: var(--color-neutral-200); /* Placeholder color */
+      transition: scale var(--transition-slow);
+    }
+
+    h2 {
+      font-size: var(--font-size-lg);
+      color: var(--text-1);
+      margin-bottom: var(--space-xs);
+    }
+
+    p {
+      /* Role/Instrument */
+      font-size: var(--font-size-md);
+      color: var(--color-primary-500);
+      font-weight: var(--font-weight-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0;
+    }
+  }
 }

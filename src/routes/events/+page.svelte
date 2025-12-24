@@ -1,3 +1,9 @@
 <script lang="ts"></script>
 
-<h1>Events</h1>
+<section>
+  <h1>Events</h1>
+
+  <article>
+    
+  </article>
+</section>
